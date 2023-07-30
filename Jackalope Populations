@@ -1,0 +1,28 @@
+Yangyang Lian
+07/22/2023
+Jackalope Populations
+CS 10 Jackalope Populations
+
+int main()
+{
+  const int BIRTHRATE=3;
+  const int DEATHRATE=1;
+  int nb,nd,c=1,ng,jn;
+  cout<<"Enter the number of jackalopes: ";
+  cin>>jn;
+  cout<<"Enter the number of generations for which to be found: ";
+  cin>>ng;
+  while(ng!=0)
+{
+  nb=jn*BIRTHRATE/100;
+  nd=jn*DEATHRATE/100;
+  jn=jn+nb-nd;
+  cout<<"\nFor generation "<<c;
+  cout<<"\n======================";
+  cout<<"\nNumber of births: "<<nb;
+  cout<<"\nNumber of deaths: "<<nd;
+  cout<<"\nTotal number of population: "<<jn;
+  c++;
+  ng--;
+  }
+}
